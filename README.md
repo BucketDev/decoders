@@ -3,7 +3,7 @@
 ![GitHub issues](https://img.shields.io/github/issues/BucketDev/decoders?style=flat-square)
 
 
-# decoders
+# 💰 🕵🏻‍♂️ Decoders 💰🕵🏻‍♂️
 This is a game for mobiles where you need to solve riddles, every level is harder thant the last one
 # Build steps
 ## Capacitor
