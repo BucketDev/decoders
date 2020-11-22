@@ -1,0 +1,7 @@
+{
+  "name": "decoders",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
