@@ -1,9 +1,10 @@
 {
-  "appId": "io.ionic.starter",
+  "appId": "com.bucketdev.mobile",
   "appName": "decoders",
   "bundledWebRuntime": false,
   "npmClient": "npm",
   "webDir": "www",
+  "linuxAndroidStudioPath": "/home/UNOSQUARE/rodrigo.loyola/Documents/android-studio/bin/studio.sh",
   "plugins": {
     "SplashScreen": {
       "launchShowDuration": 0
