@@ -5,7 +5,7 @@
 
 # decoders
 This is a game for mobiles where you need to solve riddles, every level is harder thant the last one
-#Build steps
+# Build steps
 ## Capacitor
 * npm install to create the node_modules dependencies
 * ionic build (optional --prod --release) to build the www folder with the project files
