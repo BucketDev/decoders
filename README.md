@@ -1,4 +1,7 @@
 ![GitHub](https://img.shields.io/github/license/BucketDev/decoders?style=flat-square)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/BucketDev/decoders?style=flat-square)
+![GitHub issues](https://img.shields.io/github/issues/BucketDev/decoders?style=flat-square)
+
 
 # decoders
 This is a game for mobiles where you need to solve riddles, every level is harder thant the last one
