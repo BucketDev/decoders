@@ -1,3 +1,4 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <app-loading *ngIf="loading"></app-loading>
+  <ion-router-outlet *ngIf="!loading"></ion-router-outlet>
 </ion-app>
