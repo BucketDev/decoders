@@ -1,16 +1,21 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LoadingComponent } from './loading/loading.component';
+import { EmptyMissionsComponent } from './empty-missions/empty-missions.component';
+import { IonicModule } from '@ionic/angular';
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    IonicModule
   ],
   declarations: [
-    LoadingComponent
+    LoadingComponent,
+    EmptyMissionsComponent
   ],
   exports: [
-    LoadingComponent
+    LoadingComponent,
+    EmptyMissionsComponent
   ]
 })
 export class SharedComponentsModule { }
