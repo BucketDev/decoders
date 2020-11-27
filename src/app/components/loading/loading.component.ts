@@ -14,7 +14,7 @@ export class LoadingComponent implements OnInit {
 
   ngOnInit() {
     this.loadingController.create({
-      message: 'Cargando...'
+      message: 'Loading...'
     }).then(loading => loading.present());
   }
 

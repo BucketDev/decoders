@@ -1,6 +1,7 @@
 export const environment = {
   production: true,
   decodersBannerAdID: 'ca-app-pub-4713371651982959/2411789194',
+  decodersInterstitialAdId: 'ca-app-pub-4713371651982959/1760304072',
   firebaseConfig: {
     apiKey: "AIzaSyDnj_VQUOW3VQIPpuZsCXitmMy1U1xoS40",
     authDomain: "decoders-mx.firebaseapp.com",
