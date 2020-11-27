@@ -1,7 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { Plugins, NetworkStatus, PluginListenerHandle } from '@capacitor/core';
+import { LevelService } from '../../services/level.service';
+import { MissionService } from '../../services/mission.service';
+import { Plugins, PluginListenerHandle } from '@capacitor/core';
 import { AdOptions, AdSize, AdPosition } from '@capacitor-community/admob';
 import { environment } from '../../../environments/environment';
+import { Level } from 'src/app/models/level.class';
+import { Mission } from 'src/app/models/mission.class';
 const { AdMob, Network } = Plugins;
 
 @Component({
@@ -10,24 +14,28 @@ const { AdMob, Network } = Plugins;
   styleUrls: ['home.page.scss'],
 })
 export class HomePage implements OnInit {
+
   networkStatus: any;
   networkListener: PluginListenerHandle;
+  levels: Level[];
 
   private bannerOptions: AdOptions = {
     adId: environment.decodersBannerAdID,
     adSize: AdSize.BANNER,
-    position: AdPosition.BOTTOM_CENTER,
-    isTesting: true
+    position: AdPosition.BOTTOM_CENTER
   };
 
-  constructor() {
+  constructor(private levelService: LevelService,
+              private missionService: MissionService) {
     AdMob.showBanner(this.bannerOptions);
-
-    // Subscribe Banner Event Listener
-    AdMob.addListener('onAdLoaded', (info: boolean) => console.log('ad loaded'));
   }
 
   ngOnInit() {
+    this.levelService.findAll().subscribe((levels: Level[]) => {
+      this.levels = levels;
+      levels.forEach(level => this.missionService.findAllByLevelUid(level.uid)
+        .subscribe((missions: Mission[]) => level.missions = missions));
+    });
     this.networkListener = Network.addListener('networkStatusChange', (status) => {
       this.networkStatus = status;
       console.log('Network status changed', status);
